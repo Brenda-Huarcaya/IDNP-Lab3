@@ -5,34 +5,87 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Informacion">
+
+
     <TextView
         android:id="@+id/tTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="52dp"
         android:layout_marginEnd="116dp"
         android:text="Datos Postulante"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.28"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/dDatos"
+        android:layout_width="219dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="116dp"
+        android:text="..."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tTitulo" />
+
+    <TextView
+        android:id="@+id/dDatos1"
+        android:layout_width="236dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="116dp"
+        android:text="..."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dDatos" />
+
+    <TextView
+        android:id="@+id/dDatos2"
+        android:layout_width="268dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="116dp"
+        android:text="..."
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dDatos1" />
+
     <Button
-        android:id="@+id/bEnviar"
+        android:id="@+id/bAtras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="158dp"
-        android:layout_marginTop="49dp"
         android:layout_marginEnd="164dp"
+        android:layout_marginBottom="31dp"
         android:text="Atras"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/eCarrera"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@+id/dDatos2" />
 
+    <!--
     <TextView
         android:id="@+id/eApellidoP"
         android:layout_width="wrap_content"
@@ -134,4 +187,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eColegio"
         tools:ignore="LabelFor,MissingConstraints" />
+        -->
 </androidx.constraintlayout.widget.ConstraintLayout>

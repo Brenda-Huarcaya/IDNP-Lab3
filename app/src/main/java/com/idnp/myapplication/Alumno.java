@@ -1,8 +1,10 @@
 package com.idnp.myapplication;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import java.io.Serializable;
 
-public class Alumno implements Serializable {
+public class Alumno implements Parcelable {
     String nombre, apellidoP, apellidoM, colegio, carrera, nacimiento;
 
     public Alumno(String nombre, String apellidoP, String apellidoM, String colegio, String carrera, String nacimiento) {
@@ -16,6 +18,42 @@ public class Alumno implements Serializable {
 
     public Alumno() {
     }
+
+    protected Alumno(Parcel in) {
+        nombre = in.readString();
+        apellidoP = in.readString();
+        apellidoM = in.readString();
+        colegio = in.readString();
+        carrera = in.readString();
+        nacimiento = in.readString();
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(nombre);
+        dest.writeString(apellidoP);
+        dest.writeString(apellidoM);
+        dest.writeString(colegio);
+        dest.writeString(carrera);
+        dest.writeString(nacimiento);
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public static final Creator<Alumno> CREATOR = new Creator<Alumno>() {
+        @Override
+        public Alumno createFromParcel(Parcel in) {
+            return new Alumno(in);
+        }
+
+        @Override
+        public Alumno[] newArray(int size) {
+            return new Alumno[size];
+        }
+    };
 
     public String getNombre() {
         return nombre;
@@ -68,12 +106,12 @@ public class Alumno implements Serializable {
     @Override
     public String toString() {
         return "Alumno{" +
-                "nombre='" + nombre + '\'' +
-                ", apellidoP='" + apellidoP + '\'' +
-                ", apellidoM='" + apellidoM + '\'' +
-                ", colegio='" + colegio + '\'' +
-                ", carrera='" + carrera + '\'' +
-                ", nacimiento='" + nacimiento + '\'' +
-                '}';
+                nombre + '\n' +
+                apellidoP + '\n' +
+                apellidoM + '\n' +
+                colegio + '\n' +
+                carrera + '\n' +
+                nacimiento +
+                "}";
     }
 }

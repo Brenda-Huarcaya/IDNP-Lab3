@@ -25,20 +25,24 @@ public class Postular extends AppCompatActivity {
         EditText eCarrera = findViewById(R.id.eCarrera);
         Button bEnviar = findViewById(R.id.bEnviar);
         TextView txtMessage = findViewById(R.id.txtMessage);
-        Alumno postulante = new Alumno();
-
 
         bEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String apellidoP = eApellidoP.getText().toString();
-                String apellidoM = eApellidoM.getText().toString();
-                String nombres = eNombres.getText().toString();
-                String nacimiento = eNacimiento.getText().toString();
-                String colegio = eColegio.getText().toString();
-                String carrera = eCarrera.getText().toString();
 
                 Intent detalle = new Intent(Postular.this, Informacion.class);
+                Alumno postulante = new Alumno(eApellidoP.getText().toString(),
+                        eApellidoM.getText().toString(),
+                        eNombres.getText().toString(),
+                        eNacimiento.getText().toString(),
+                        eColegio.getText().toString(),
+                        eCarrera.getText().toString());
+
+                detalle.putExtra("person", postulante);
+
+                startActivity(detalle);
+
+               /*
                 detalle.putExtra("apellidoP", apellidoP);
                 detalle.putExtra("apellidoM", apellidoM);
                 detalle.putExtra("nombre", nombres);
@@ -46,6 +50,8 @@ public class Postular extends AppCompatActivity {
                 detalle.putExtra("colegio", colegio);
                 detalle.putExtra("carrera", carrera);
 
+                startActivity(detalle);
+*/
 /*
                 txtMessage.setText("Enviado");
                 postulante.setApellidoM(String.valueOf(eApellidoM));
@@ -57,7 +63,6 @@ public class Postular extends AppCompatActivity {
 */
                //Intent intent = new Intent(.this, Informacion.class);
                 //intent.putExtra("Postulante", postulante);
-                startActivity(detalle);
 
             }
         });

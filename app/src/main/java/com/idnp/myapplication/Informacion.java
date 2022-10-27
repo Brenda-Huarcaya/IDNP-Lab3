@@ -17,26 +17,42 @@ public class Informacion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_informacion);
-/*
-        ArrayList<Alumno> listaUsuario = new ArrayList<>();
-        Alumno  alumno = (Alumno) getIntent().getSerializableExtra("Postulante");
-        listaUsuario.add(alumno);
-*/
+
+        ArrayList<Alumno> listaAlumnos = new ArrayList<>();
+        Bundle extras = getIntent().getExtras();
+        Alumno  alumno = extras.getParcelable("person");
+        listaAlumnos.add(alumno);
+
+        TextView eDatos = findViewById(R.id.dDatos);
+        Button bAtra = findViewById(R.id.bAtras);
+
+        for (int i=0;i<listaAlumnos.size();i++) {
+            eDatos.setText(String.format("%s\n",
+                    listaAlumnos.get(i).toString()
+                    )
+            );
+        }
+/*eDatos.setText(String.format("%s\n%s\n%s\n%s\n%s\n%s",
+                    alumno.getApellidoP(),
+                    alumno.getApellidoM(),
+                    alumno.getNombre(),
+                    alumno.getNacimiento(),
+                    alumno.getColegio(),
+                    alumno.getCarrera()
+                    )
+            );*/
+
+
+        /*
+        //llamarlos de xml
         TextView eApellidoP = findViewById(R.id.eApellidoP);
         TextView eApellidoM = findViewById(R.id.eApellidoM);
         TextView eNombres = findViewById(R.id.eNombres);
         TextView eNacimiento = findViewById(R.id.eFechadeNacimiento);
         TextView eColegio = findViewById(R.id.eColegio);
         TextView eCarrera = findViewById(R.id.eCarrera);
-        Button bAtras = findViewById(R.id.bEnviar);
-/*
-        eApellidoP.setText(alumno.getApellidoP().toString());
-        eApellidoM.setText(alumno.getApellidoM());
-        eNombres.setText(alumno.getNombre());
-        eNacimiento.setText(alumno.getNacimiento());
-        eColegio.setText(alumno.getColegio());
-        eCarrera.setText(alumno.getCarrera());
-*/
+
+        //agarrar cada dato con intent
         Bundle extras = getIntent().getExtras();
         String apeP = extras.getString("apellidoP");
         String apeM = extras.getString("apellidoM");
@@ -45,14 +61,19 @@ public class Informacion extends AppCompatActivity {
         String col = extras.getString("colegio");
         String carr = extras.getString("carrera");
 
+        //para imprimir
+        eDatos.setText(String.format("%s\n%s\n%s\n%s\n%s\n%s", apeP, apeM, nam, nac, col, carr));
+
+        //para imprimir los dato
         eApellidoP.setText(apeP);
         eApellidoM.setText(apeM);
         eNombres.setText(nam);
         eNacimiento.setText(nac);
         eColegio.setText(col);
         eCarrera.setText(carr);
+        */
 
-        bAtras.setOnClickListener(new View.OnClickListener() {
+        bAtra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MenuActivity.class);

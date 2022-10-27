@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 String usuario = eUsuario.getText().toString();
                 String contrasena = eContrasena.getText().toString();
 
-                if (usuario.equals("usuario") && contrasena.equals("12345")){
+                if (usuario.equals("Usuario") && contrasena.equals("Contraseña")){
                     Intent intent = new Intent(getApplicationContext(), MenuActivity.class);
                     startActivity(intent);
                 }
