@@ -31,6 +31,22 @@ public class Postular extends AppCompatActivity {
         bEnviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String apellidoP = eApellidoP.getText().toString();
+                String apellidoM = eApellidoM.getText().toString();
+                String nombres = eNombres.getText().toString();
+                String nacimiento = eNacimiento.getText().toString();
+                String colegio = eColegio.getText().toString();
+                String carrera = eCarrera.getText().toString();
+
+                Intent detalle = new Intent(Postular.this, Informacion.class);
+                detalle.putExtra("apellidoP", apellidoP);
+                detalle.putExtra("apellidoM", apellidoM);
+                detalle.putExtra("nombre", nombres);
+                detalle.putExtra("nacimiento", nacimiento);
+                detalle.putExtra("colegio", colegio);
+                detalle.putExtra("carrera", carrera);
+
+/*
                 txtMessage.setText("Enviado");
                 postulante.setApellidoM(String.valueOf(eApellidoM));
                 postulante.setApellidoP(String.valueOf(eApellidoP));
@@ -38,6 +54,10 @@ public class Postular extends AppCompatActivity {
                 postulante.setNacimiento(String.valueOf(eNacimiento));
                 postulante.setCarrera(String.valueOf(eCarrera));
                 postulante.setColegio(String.valueOf(eColegio));
+*/
+               //Intent intent = new Intent(.this, Informacion.class);
+                //intent.putExtra("Postulante", postulante);
+                startActivity(detalle);
 
             }
         });

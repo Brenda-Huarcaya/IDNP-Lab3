@@ -64,4 +64,16 @@ public class Alumno implements Serializable {
     public void setNacimiento(String nacimiento) {
         this.nacimiento = nacimiento;
     }
+
+    @Override
+    public String toString() {
+        return "Alumno{" +
+                "nombre='" + nombre + '\'' +
+                ", apellidoP='" + apellidoP + '\'' +
+                ", apellidoM='" + apellidoM + '\'' +
+                ", colegio='" + colegio + '\'' +
+                ", carrera='" + carrera + '\'' +
+                ", nacimiento='" + nacimiento + '\'' +
+                '}';
+    }
 }
