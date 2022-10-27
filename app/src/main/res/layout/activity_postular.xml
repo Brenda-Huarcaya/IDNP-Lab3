@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Postular">
+
+    <TextView
+        android:id="@+id/tTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="116dp"
+        android:text="@string/datos_de_postulante"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="80dp"
+        android:text="@string/Enviado"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/bEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="158dp"
+        android:layout_marginTop="49dp"
+        android:layout_marginEnd="164dp"
+        android:text="@string/enviar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eCarrera"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/eApellidoP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="101dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/apellido_paterno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tTitulo"
+        tools:ignore="LabelFor,MissingConstraints" />
+
+    <EditText
+        android:id="@+id/eApellidoM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="101dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/apellido_materno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eApellidoP"
+        tools:ignore="LabelFor,MissingConstraints" />
+
+    <EditText
+        android:id="@+id/eNombres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="101dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/nombres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eApellidoM"
+        tools:ignore="LabelFor,MissingConstraints" />
+
+    <EditText
+        android:id="@+id/eFechadeNacimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="101dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:text="@string/fecha_de_nacimiento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eNombres"
+        tools:ignore="LabelFor,MissingConstraints" />
+
+    <EditText
+        android:id="@+id/eColegio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="101dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/colegio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eFechadeNacimiento"
+        tools:ignore="LabelFor,MissingConstraints" />
+
+    <EditText
+        android:id="@+id/eCarrera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="101dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="@string/carrera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eColegio"
+        tools:ignore="LabelFor,MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

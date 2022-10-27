@@ -6,14 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".MenuActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/bPostular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Activity Menu"
-        android:textSize="40sp"
+        android:layout_marginTop="368dp"
+        android:text="Postular"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:text="Informacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

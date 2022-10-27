@@ -2,4 +2,13 @@
     <string name="app_name">My Application</string>
     <string name="Usuario" />
     <string name="Contraseña" />
+    <string name="carrera" />
+    <string name="colegio" />
+    <string name="fecha_de_nacimiento" />
+    <string name="nombres" />
+    <string name="apellido_materno" />
+    <string name="apellido_paterno" />
+    <string name="enviar" />
+    <string name="Enviado" />
+    <string name="datos_de_postulante" />
 </resources>

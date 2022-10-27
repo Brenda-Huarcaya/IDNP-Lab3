@@ -14,18 +14,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-  /*  ActivityResultLauncher<Intent> mStartForResult = registerForActivityResult(new StartActivityForResult(),
-            new ActivityResultCallback<ActivityResult>() {
-                @Override
-                public void onActivityResult(ActivityResult result) {
-                    if (result.getResultCode() == Activity.RESULT_OK) {
-                        Intent intent = result.getData();
-                        // Handle the Intent
-                    }
-                }
-            });
-*/
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
